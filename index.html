@@ -5,59 +5,53 @@
 <title>ถึงเพื่อนของเรา</title>
 
 <style>
-body{
-    margin:0;
-    font-family:sans-serif;
-    background:linear-gradient(to bottom,#0f0f0f,#1a1a1a);
-    color:white;
-    overflow:hidden;
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #111;
+    color: white;
+    overflow: hidden;
 }
 
 
-.container{
-    width:100%;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
 }
 
-
-.scene{
-    position:absolute;
-    width:100%;
-    max-width:1000px;
-    padding:30px;
-    font-size:2.4rem;
-    line-height:1.8;
-    opacity:0;
-    transition:opacity 2s ease;
+.scene {
+    position: absolute;
+    max-width: 1100px;
+    font-size: 2.8rem;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 2s;
 }
 
-.show{
-    opacity:1;
+.show {
+    opacity: 1;
 }
 
-.final{
-    font-size:4rem;
-    animation:glow 2s infinite alternate;
+#startBtn {
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 40px;
+    background: #ff6b81;
+    color: white;
+    cursor: pointer;
 }
 
-@keyframes glow{
-    from{ text-shadow:0 0 10px #fff; }
-    to{ text-shadow:0 0 40px #fff; }
-}
-
-#startBtn{
-    padding:18px 36px;
-    font-size:1.6rem;
-    border:none;
-    border-radius:40px;
-    background:#ff6b81;
-    color:white;
-    cursor:pointer;
+@media (max-width: 768px) {
+    .scene {
+        font-size: 2rem;
+    }
 }
 </style>
 </head>
@@ -69,95 +63,70 @@ body{
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
 <audio id="bgMusic" src="song.mp3.mp3"></audio>
 
-
-
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
-<div class="scene">ก่อนที่ดนตรีจะดังขึ้น</div>
-<div class="scene">เราอยากให้พวกแกอ่านมันช้า ๆ</div>
-<div class="scene">บางคำมันอาจดูธรรมดา</div>
-<div class="scene">แต่มันมีค่ามากสำหรับเรา</div>
+<div class="scene">ก่อนที่ดนตรีจะเริ่มจริง ๆ</div>
+<div class="scene">ก่อนที่เสียงทุกอย่างจะดังขึ้น</div>
+<div class="scene">เราอยากให้พวกแกอ่านสิ่งนี้ช้า ๆ</div>
+<div class="scene">เพราะบางคำ เราอาจไม่มีโอกาสพูดมันอีกแล้ว</div>
+<div class="scene">บางความรู้สึก เราเก็บมันไว้เงียบ ๆ มาตลอด</div>
+<div class="scene">และนี่อาจเป็นครั้งเดียวที่เรากล้าพอจะบอกมัน</div>
 
-<div class="scene">เวลามันผ่านไปเร็วมากจริง ๆ</div>
-<div class="scene">จากวันแรกที่ยังไม่รู้จักกัน</div>
-<div class="scene">จากวันที่ยังเรียกชื่อกันไม่ถูก</div>
-<div class="scene">จากวันที่ยังไม่กล้าทักกันด้วยซ้ำ</div>
+<div class="scene">จริง ๆ เราไม่ใช่คนที่พูดความรู้สึกเก่ง</div>
+<div class="scene">หลายอย่างเราก็เก็บไว้ข้างใน ทำเป็นปกติไปวัน ๆ</div>
+<div class="scene">แต่พอเวลามันใกล้จะหมดลงจริง ๆ</div>
+<div class="scene">เราถึงรู้ว่า มีหลายอย่างที่อยากบอก</div>
 
-<div class="scene">ไม่รู้ตั้งแต่ตอนไหน</div>
-<div class="scene">พวกแกกลายเป็นส่วนหนึ่งของชีวิตเราไปแล้ว</div>
+<div class="scene">ช่วงมัธยมปลายของเรา</div>
+<div class="scene">มันไม่ได้มีแค่การเรียน หรือการสอบ</div>
+<div class="scene">มันมีพวกแกอยู่ในนั้นด้วย</div>
 
-<div class="scene">มีทั้งเสียงหัวเราะ</div>
-<div class="scene">มีทั้งวันที่เรียนไม่รู้เรื่อง</div>
-<div class="scene">มีทั้งวันที่โดนดุ</div>
-<div class="scene">มีทั้งวันที่เหนื่อย</div>
-<div class="scene">มีทั้งวันที่ท้อ</div>
+<div class="scene">มีทั้งวันที่หัวเราะกันจนเหนื่อย</div>
+<div class="scene">วันที่นั่งบ่นเรื่องชีวิต เรื่องเรียน เรื่องความรัก</div>
+<div class="scene">หรือบางทีก็แค่คุยเรื่องไร้สาระ</div>
 
-<div class="scene">แต่ทุกครั้งที่หันไปข้าง ๆ</div>
-<div class="scene">แล้วเห็นพวกแกยังอยู่ตรงนั้น</div>
-<div class="scene">มันทำให้ทุกอย่างเบาลงเสมอ</div>
+<div class="scene">บางวันมันก็ไม่โอเคเลย</div>
+<div class="scene">บางวันเราเหนื่อยมาก ๆ</div>
+<div class="scene">แต่แค่ได้คุยกับเพื่อน ทุกอย่างมันก็ดีขึ้น</div>
 
-<div class="scene">เราคงไม่มีวันลืม</div>
-<div class="scene">ตอนเดินเข้าเรียนพร้อมกัน</div>
-<div class="scene">ตอนนั่งคุยกันหลังห้อง</div>
-<div class="scene">ตอนลอกการบ้านก่อนส่ง</div>
-<div class="scene">ตอนแย่งของกินกัน</div>
-<div class="scene">ตอนบ่นเรื่องครู</div>
-<div class="scene">ตอนหัวเราะจนท้องแข็ง</div>
+<div class="scene">สำหรับเรา การมีเพื่อนที่รักเรา แล้วเราก็รักเขากลับ</div>
+<div class="scene">มันทำให้ชีวิตมีความหมายจริง ๆ</div>
 
-<div class="scene">บางความทรงจำมันดูเล็กมาก</div>
-<div class="scene">แต่มันทำให้เรายิ้มได้ทุกครั้งที่นึกถึง</div>
+<div class="scene">เราโชคดีนะ ที่มีพวกแกอยู่ในช่วงชีวิตนี้</div>
+<div class="scene">ตอนนี้มันใกล้จะจบแล้ว</div>
+<div class="scene">แต่สิ่งที่เราจะคิดถึงมากที่สุด คือพวกแก</div>
 
-<div class="scene">สำหรับเรา เพื่อนไม่ใช่แค่คนในห้อง</div>
-<div class="scene">แต่มันคือคนที่ทำให้ช่วงเวลาหนึ่งของชีวิตมีความหมาย</div>
-
-<div class="scene">เราโชคดีมากจริง ๆ ที่ได้รู้จักพวกแก</div>
-<div class="scene">ได้ใช้เวลาหัวเราะด้วยกัน</div>
-<div class="scene">ได้เติบโตมาพร้อมกัน</div>
-
-<div class="scene">หลังจากนี้ แต่ละคนคงต้องเดินตามเส้นทางของตัวเอง</div>
-<div class="scene">อาจจะไม่ได้เจอกันทุกวันอีกแล้ว</div>
-<div class="scene">อาจจะไม่ได้คุยกันเหมือนเดิม</div>
-
-<div class="scene">เทอมหน้า...</div>
-<div class="scene">เราคงไม่ได้นั่งกินข้าวด้วยกันแล้วนะ</div>
+<div class="scene">เทอมหน้า เราคงไม่ได้นั่งกินข้าวด้วยกันแล้วนะ</div>
 <div class="scene">ไม่มีเสียงเรียกกันข้ามโต๊ะ</div>
 <div class="scene">ไม่มีเสียงหัวเราะดัง ๆ ในโรงอาหารอีกแล้ว</div>
 
-<div class="scene">แต่มันไม่ได้แปลว่า</div>
-<div class="scene">ความสำคัญของพวกแกจะหายไป</div>
-
-<div class="scene">ความทรงจำพวกนั้น</div>
-<div class="scene">จะอยู่กับเราเสมอ</div>
-
 <div class="scene">ขอให้พวกแกโชคดีนะ</div>
-<div class="scene">ขอให้อนาคตสดใส</div>
-<div class="scene">เจอแต่สิ่งดี ๆ</div>
-<div class="scene">และมีความสุขกับเส้นทางของตัวเอง</div>
+<div class="scene">ขอให้อนาคตของพวกแกสดใส</div>
 
-<div class="scene final">ด้วยรักจากภูชิ 🤍</div>
+<div class="scene" style="font-size:3.8rem;">ด้วยรักจากภูชิ 🤍</div>
 
 </div>
 
 <script>
-const scenes=document.querySelectorAll(".scene");
-const btn=document.getElementById("startBtn");
-const music=document.getElementById("bgMusic");
+const scenes = document.querySelectorAll(".scene");
+const startBtn = document.getElementById("startBtn");
+const music = document.getElementById("bgMusic");
 
-btn.onclick=()=>{
-btn.style.display="none";
-music.play();
+startBtn.onclick = () => {
+    startBtn.style.display = "none";
+    music.play();
 
-let i=0;
-function showNext(){
-if(i>0) scenes[i-1].classList.remove("show");
-if(i<scenes.length){
-scenes[i].classList.add("show");
-i++;
-setTimeout(showNext,6500);
-}
-}
-showNext();
-}
+    let i = 0;
+    function showNext() {
+        if (i > 0) scenes[i - 1].classList.remove("show");
+        if (i < scenes.length) {
+            scenes[i].classList.add("show");
+            i++;
+            setTimeout(showNext, 6000);
+        }
+    }
+    showNext();
+};
 </script>
 
 </body>
