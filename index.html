@@ -40,6 +40,7 @@ body {
     background: #ff6b81;
     color: white;
     cursor: pointer;
+    z-index: 10;
 }
 </style>
 </head>
@@ -47,8 +48,9 @@ body {
 <body>
 
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
-<audio id="bgMusic" src="song.mp3.mp3
-"></audio>
+
+<!-- ตรงนี้สำคัญ: ชื่อไฟล์ต้องตรงกับใน GitHub -->
+<audio id="bgMusic" src="song.mp3.mp3"></audio>
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
@@ -113,7 +115,7 @@ const music = document.getElementById("bgMusic");
 
 startBtn.onclick = () => {
     startBtn.style.display = "none";
-    music.play();
+    music.play().catch(() => {});
 
     let i = 0;
     function showNext() {
