@@ -47,6 +47,15 @@ button {
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
 <audio id="bgMusic" src="song.mp3"></audio>
 
+<script>
+document.getElementById("startBtn").addEventListener("click", function() {
+    const music = document.getElementById("bgMusic");
+    music.play();
+});
+</script>
+</body>
+
+
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
