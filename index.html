@@ -47,16 +47,6 @@ button {
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
 <audio id="bgMusic" src="song.mp3"></audio>
 
-<script>
-document.getElementById("startBtn").addEventListener("click", function() {
-    const music = document.getElementById("bgMusic");
-    music.play();
-});
-</script>
-</body>
-
-
-
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
 <div class="scene">แล้วนี่คือสิ่งที่อยากบอกพวกแก ก่อนที่ช่วงเวลานี้จะจบลง</div>
@@ -117,10 +107,11 @@ document.getElementById("startBtn").addEventListener("click", function() {
 <script>
 const scenes = document.querySelectorAll(".scene");
 const startBtn = document.getElementById("startBtn");
-const music = document.getElementById("music");
+const music = document.getElementById("bgMusic");
 
 startBtn.onclick = () => {
     startBtn.style.display = "none";
+    music.currentTime = 0;
     music.play();
 
     let i = 0;
