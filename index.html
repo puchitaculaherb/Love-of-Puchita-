@@ -11,6 +11,7 @@ body{
     background:#111;
     color:white;
     font-family:sans-serif;
+    overflow:hidden;
 }
 
 .container{
@@ -24,6 +25,17 @@ body{
     padding:20px;
 }
 
+#startBtn{
+    padding:22px 45px;
+    font-size:1.7rem;
+    border:none;
+    border-radius:50px;
+    background:#ff6b81;
+    color:white;
+    cursor:pointer;
+    z-index:10;
+}
+
 .scene{
     position:absolute;
     max-width:1100px;
@@ -31,20 +43,11 @@ body{
     line-height:1.6;
     opacity:0;
     transition:opacity 1.5s ease;
+    pointer-events:none;
 }
 
 .show{
     opacity:1;
-}
-
-#startBtn{
-    padding:20px 40px;
-    font-size:1.6rem;
-    border:none;
-    border-radius:40px;
-    background:#ff6b81;
-    color:white;
-    cursor:pointer;
 }
 
 @media(max-width:768px){
@@ -64,6 +67,8 @@ body{
 <audio id="bgMusic">
     <source src="song.mp3.mp3" type="audio/mpeg">
 </audio>
+
+
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
@@ -104,8 +109,10 @@ body{
 
 <div class="scene">ขอให้พวกแกโชคดีนะ</div>
 <div class="scene">ขอให้อนาคตของพวกแกสดใส</div>
+<div class="scene">ขอให้ความฝันของพวกแกเป็นจริง</div>
+<div class="scene">และขอให้เราได้เจอกันอีกครั้ง</div>
 
-<div class="scene" style="font-size:3.5rem;">ด้วยรักจากภูชิ 🤍</div>
+<div class="scene" style="font-size:3.6rem;">ด้วยรักจากภูชิ 🤍</div>
 
 </div>
 
@@ -119,7 +126,7 @@ startBtn.addEventListener("click", function(){
     startBtn.style.display="none";
 
     music.play().catch(function(err){
-        console.log("เล่นเพลงไม่ได้:", err);
+        console.log("เพลงเล่นไม่ได้:", err);
     });
 
     let i = 0;
@@ -132,7 +139,7 @@ startBtn.addEventListener("click", function(){
         if(i < scenes.length){
             scenes[i].classList.add("show");
             i++;
-            setTimeout(showNext, 6000);
+            setTimeout(showNext, 5500);
         }
     }
 
