@@ -2,55 +2,54 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ถึงเพื่อนของเรา</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #111;
-    color: white;
-    overflow: hidden;
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    font-family:sans-serif;
 }
 
-
-.container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    padding:20px;
 }
 
-.scene {
-    position: absolute;
-    max-width: 1100px;
-    font-size: 2.8rem;
-    line-height: 1.6;
-    opacity: 0;
-    transition: opacity 2s;
+.scene{
+    position:absolute;
+    max-width:1100px;
+    font-size:2.6rem;
+    line-height:1.6;
+    opacity:0;
+    transition:opacity 1.5s ease;
 }
 
-.show {
-    opacity: 1;
+.show{
+    opacity:1;
 }
 
-#startBtn {
-    padding: 20px 40px;
-    font-size: 1.8rem;
-    border: none;
-    border-radius: 40px;
-    background: #ff6b81;
-    color: white;
-    cursor: pointer;
+#startBtn{
+    padding:20px 40px;
+    font-size:1.6rem;
+    border:none;
+    border-radius:40px;
+    background:#ff6b81;
+    color:white;
+    cursor:pointer;
 }
 
-@media (max-width: 768px) {
-    .scene {
-        font-size: 2rem;
+@media(max-width:768px){
+    .scene{
+        font-size:2rem;
     }
 }
 </style>
@@ -61,7 +60,10 @@ body {
 <div class="container">
 
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
-<audio id="bgMusic" src="song.mp3.mp3"></audio>
+
+<audio id="bgMusic">
+    <source src="song.mp3.mp3" type="audio/mpeg">
+</audio>
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
@@ -103,7 +105,7 @@ body {
 <div class="scene">ขอให้พวกแกโชคดีนะ</div>
 <div class="scene">ขอให้อนาคตของพวกแกสดใส</div>
 
-<div class="scene" style="font-size:3.8rem;">ด้วยรักจากภูชิ 🤍</div>
+<div class="scene" style="font-size:3.5rem;">ด้วยรักจากภูชิ 🤍</div>
 
 </div>
 
@@ -112,21 +114,30 @@ const scenes = document.querySelectorAll(".scene");
 const startBtn = document.getElementById("startBtn");
 const music = document.getElementById("bgMusic");
 
-startBtn.onclick = () => {
-    startBtn.style.display = "none";
-    music.play();
+startBtn.addEventListener("click", function(){
+
+    startBtn.style.display="none";
+
+    music.play().catch(function(err){
+        console.log("เล่นเพลงไม่ได้:", err);
+    });
 
     let i = 0;
-    function showNext() {
-        if (i > 0) scenes[i - 1].classList.remove("show");
-        if (i < scenes.length) {
+
+    function showNext(){
+        if(i > 0){
+            scenes[i-1].classList.remove("show");
+        }
+
+        if(i < scenes.length){
             scenes[i].classList.add("show");
             i++;
             setTimeout(showNext, 6000);
         }
     }
+
     showNext();
-};
+});
 </script>
 
 </body>
