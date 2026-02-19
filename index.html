@@ -46,14 +46,64 @@ body {
 
 <body>
 
-<button id="startBtn">กดเพื่อเริ่ม</button>
+<button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
 <audio id="bgMusic" src="song.mp3"></audio>
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
-<div class="scene">แล้วนี่คือสิ่งที่อยากบอกพวกแก</div>
-<div class="scene">ก่อนที่ช่วงเวลานี้จะจบลง</div>
-<div class="scene">เรารักพวกแกนะ</div>
+<div class="scene">แล้วนี่คือสิ่งที่อยากบอกพวกแก ก่อนที่ช่วงเวลานี้จะจบลง</div>
+
+<div class="scene">จริง ๆ เราไม่ใช่คนที่พูดความรู้สึกเก่ง</div>
+<div class="scene">หลายอย่างเราก็เก็บไว้ข้างใน ทำเป็นปกติไปวัน ๆ</div>
+
+<div class="scene">แต่พอเวลามันใกล้จะหมดลงจริง ๆ</div>
+<div class="scene">เราถึงรู้ว่า มีหลายอย่างที่อยากบอก</div>
+
+<div class="scene">ช่วงมัธยมปลายของเรา</div>
+<div class="scene">มันไม่ได้มีแค่การเรียน หรือการสอบ</div>
+<div class="scene">มันมีพวกแกอยู่ในนั้นด้วย</div>
+
+<div class="scene">มีทั้งวันที่หัวเราะกันจนเหนื่อย</div>
+<div class="scene">วันที่นั่งบ่นเรื่องชีวิต เรื่องเรียน เรื่องความรัก</div>
+<div class="scene">หรือบางทีก็แค่คุยเรื่องไร้สาระ</div>
+
+<div class="scene">บางวันมันก็ไม่โอเคเลย</div>
+<div class="scene">แต่แค่ได้คุยกับเพื่อน ทุกอย่างมันก็ดีขึ้น</div>
+
+<div class="scene">สำหรับเรา การมีเพื่อนที่รักเรา แล้วเราก็รักเขากลับ</div>
+<div class="scene">มันทำให้ชีวิตมีความหมายจริง ๆ</div>
+
+<div class="scene">บางที เพื่อนก็คือยาฮีลใจที่ดีที่สุดแล้ว</div>
+
+<div class="scene">เราโชคดีนะ ที่มีพวกแกอยู่ในช่วงชีวิตนี้</div>
+<div class="scene">ไม่ว่าจะสนิทมากหรือน้อย</div>
+<div class="scene">ทุกคนก็เคยเป็นส่วนหนึ่งในชีวิตเรา</div>
+
+<div class="scene">ตอนนี้มันใกล้จะจบแล้ว</div>
+<div class="scene">แต่สิ่งที่เราจะคิดถึงมากที่สุด คือพวกแก</div>
+
+<div class="scene">หลังจากนี้ แต่ละคนคงต้องไปในทางของตัวเอง</div>
+
+<div class="scene">เราอยากให้พวกแกมีอนาคตที่ดี</div>
+<div class="scene">เจอแต่คนใจดี ไม่ทำร้ายหัวใจพวกแก</div>
+
+<div class="scene">อยากให้คนที่พวกแกจะไปเจอ</div>
+<div class="scene">รักพวกแก เหมือนที่เราเคยรัก</div>
+
+<div class="scene">พรไหนในโลกนี้ที่ดี</div>
+<div class="scene">เราอยากให้มันเกิดกับพวกแกทุกคน</div>
+
+<div class="scene">แล้วถ้าวันไหนเหนื่อย</div>
+<div class="scene">อยากให้จำไว้ว่า</div>
+
+<div class="scene">ครั้งหนึ่ง เคยมีเพื่อนคนหนึ่ง</div>
+<div class="scene">ที่รักพวกแกมากจริง ๆ</div>
+
+<div class="scene">ขอบคุณนะ สำหรับทุกช่วงเวลาที่เคยมีด้วยกัน</div>
+
+<div class="scene" style="font-size:2.4rem;">เรารักพวกแกนะ</div>
+<div class="scene">— จากเพื่อนคนหนึ่ง</div>
+<div class="scene" style="font-size:2.6rem;">ภูชิตะ จูมี</div>
 
 <script>
 const scenes = document.querySelectorAll(".scene");
@@ -70,7 +120,7 @@ startBtn.onclick = () => {
         if (i < scenes.length) {
             scenes[i].classList.add("show");
             i++;
-            setTimeout(showNext, 4000);
+            setTimeout(showNext, 4500);
         }
     }
     showNext();
