@@ -6,11 +6,17 @@
 <title>ถึงเพื่อนของเรา</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     background:#111;
     color:white;
     font-family:sans-serif;
+    height:100vh;
     overflow:hidden;
 }
 
@@ -26,10 +32,10 @@ body{
 }
 
 #startBtn{
-    padding:22px 45px;
-    font-size:1.7rem;
+    padding:18px 40px;
+    font-size:1.5rem;
     border:none;
-    border-radius:50px;
+    border-radius:40px;
     background:#ff6b81;
     color:white;
     cursor:pointer;
@@ -38,8 +44,11 @@ body{
 
 .scene{
     position:absolute;
-    max-width:1100px;
-    font-size:2.6rem;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    max-width:950px;
+    font-size:1.8rem;
     line-height:1.6;
     opacity:0;
     transition:opacity 1.5s ease;
@@ -52,7 +61,7 @@ body{
 
 @media(max-width:768px){
     .scene{
-        font-size:2rem;
+        font-size:1.4rem;
     }
 }
 </style>
@@ -64,20 +73,21 @@ body{
 
 <button id="startBtn">กดเพื่อเริ่มอ่านข้อความ</button>
 
-<audio id="bgMusic">
+<audio id="bgMusic" preload="auto">
     <source src="song.mp3.mp3" type="audio/mpeg">
 </audio>
-
 
 
 <div class="scene">ถึงเพื่อนของเรา</div>
 <div class="scene">เราภูชิตะนะ</div>
 <div class="scene">ก่อนที่ดนตรีจะเริ่มจริง ๆ</div>
 <div class="scene">ก่อนที่เสียงทุกอย่างจะดังขึ้น</div>
+<div class="scene">ก่อนที่ทุกอย่างจะเดินต่อไป</div>
 <div class="scene">เราอยากให้พวกแกอ่านสิ่งนี้ช้า ๆ</div>
 <div class="scene">เพราะบางคำ เราอาจไม่มีโอกาสพูดมันอีกแล้ว</div>
+<div class="scene">เพราะบางคำ เราไม่เคยพูดออกไปตรง ๆ</div>
 <div class="scene">บางความรู้สึก เราเก็บมันไว้เงียบ ๆ มาตลอด</div>
-<div class="scene">และนี่อาจเป็นครั้งเดียวที่เรากล้าพอจะบอกมัน</div>
+<div class="scene">และนี่อาจเป็นครั้งเดียวที่เราจะกล้าบอกมัน</div>
 
 <div class="scene">จริง ๆ เราไม่ใช่คนที่พูดความรู้สึกเก่ง</div>
 <div class="scene">หลายอย่างเราก็เก็บไว้ข้างใน ทำเป็นปกติไปวัน ๆ</div>
@@ -99,51 +109,67 @@ body{
 <div class="scene">สำหรับเรา การมีเพื่อนที่รักเรา แล้วเราก็รักเขากลับ</div>
 <div class="scene">มันทำให้ชีวิตมีความหมายจริง ๆ</div>
 
+<div class="scene">บางที เพื่อนก็คือยาฮีลใจที่ดีที่สุดแล้ว</div>
+
 <div class="scene">เราโชคดีนะ ที่มีพวกแกอยู่ในช่วงชีวิตนี้</div>
+<div class="scene">ไม่ว่าจะสนิทมากหรือน้อย</div>
+<div class="scene">ทุกคนก็เคยเป็นส่วนหนึ่งในชีวิตเรา</div>
+
 <div class="scene">ตอนนี้มันใกล้จะจบแล้ว</div>
 <div class="scene">แต่สิ่งที่เราจะคิดถึงมากที่สุด คือพวกแก</div>
 
+<div class="scene">หลังจากนี้ แต่ละคนคงต้องไปในทางของตัวเอง</div>
+<div class="scene">เราอาจไม่ได้เจอกันทุกวันอีกแล้ว</div>
+
 <div class="scene">เทอมหน้า เราคงไม่ได้นั่งกินข้าวด้วยกันแล้วนะ</div>
 <div class="scene">ไม่มีเสียงเรียกกันข้ามโต๊ะ</div>
+<div class="scene">ไม่มีการแย่งของกิน</div>
+<div class="scene">ไม่มีการแย่งของกิน หรือคุยกันเสียงดังในโรงอาหาร</div>
 <div class="scene">ไม่มีเสียงหัวเราะดัง ๆ ในโรงอาหารอีกแล้ว</div>
+
+<div class="scene">แต่ความทรงจำพวกนั้น</div>
+<div class="scene">มันจะอยู่กับเราไปอีกนานมาก</div>
 
 <div class="scene">ขอให้พวกแกโชคดีนะ</div>
 <div class="scene">ขอให้อนาคตของพวกแกสดใส</div>
-<div class="scene">ขอให้ความฝันของพวกแกเป็นจริง</div>
-<div class="scene">และขอให้เราได้เจอกันอีกครั้ง</div>
+<div class="scene">เจอแต่คนใจดี และมีความสุขกับเส้นทางของตัวเอง</div>
 
-<div class="scene" style="font-size:3.6rem;">ด้วยรักจากภูชิ 🤍</div>
+<div class="scene" style="font-size:2.5rem;">ด้วยรักจากภูชิ 🤍</div>
 
 </div>
 
 <script>
-const scenes = document.querySelectorAll(".scene");
-const startBtn = document.getElementById("startBtn");
-const music = document.getElementById("bgMusic");
+window.addEventListener("load", function(){
 
-startBtn.addEventListener("click", function(){
+    const scenes = document.querySelectorAll(".scene");
+    const startBtn = document.getElementById("startBtn");
+    const music = document.getElementById("bgMusic");
 
-    startBtn.style.display="none";
+    startBtn.onclick = function(){
 
-    music.play().catch(function(err){
-        console.log("เพลงเล่นไม่ได้:", err);
-    });
+        startBtn.style.display = "none";
 
-    let i = 0;
+        music.play().catch(function(err){
+            alert("เพลงเล่นไม่ได้ ตรวจสอบชื่อไฟล์ song.mp3.mp3");
+        });
 
-    function showNext(){
-        if(i > 0){
-            scenes[i-1].classList.remove("show");
+        let i = 0;
+
+        function showNext(){
+            if(i > 0){
+                scenes[i-1].classList.remove("show");
+            }
+
+            if(i < scenes.length){
+                scenes[i].classList.add("show");
+                i++;
+                setTimeout(showNext, 5200);
+            }
         }
 
-        if(i < scenes.length){
-            scenes[i].classList.add("show");
-            i++;
-            setTimeout(showNext, 5500);
-        }
-    }
+        showNext();
+    };
 
-    showNext();
 });
 </script>
 
